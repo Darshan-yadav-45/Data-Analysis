@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ratings Analysis Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-gear logo-icon"></i>
+                <h2>Workspace</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item"><i class="fa-solid fa-house"></i> Overview</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-folder"></i> Projects</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-list-check"></i> Tasks</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-calendar"></i> Calendar</a>
+                <a href="#" class="nav-item active"><i class="fa-solid fa-chart-simple"></i> Analytics</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-file-lines"></i> Documents</a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-envelope"></i> Messages</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-user-group"></i> Team</a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="upgrade-card">
+                    <div class="upgrade-header" style="display:flex; gap:10px; align-items:center;">
+                        <div class="upgrade-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="upgrade-text">
+                            <h4>Upgrade Plan</h4>
+                            <p>Unlock premium features</p>
+                        </div>
+                    </div>
+                    <button class="upgrade-btn">Upgrade Now</button>
+                </div>
+                
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Alex Johnson" class="avatar">
+                    <div class="user-info">
+                        <h4>Alex Johnson</h4>
+                        <p>Product Designer</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down" style="margin-left: auto; color: var(--text-light); font-size: 12px;"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <h1>Book Ratings Analysis</h1>
+                    <p>Track performance, and key business insights.</p>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search projects...">
+                    </div>
+                    <div class="header-icons">
+                        <i class="fa-regular fa-bell"></i>
+                        <i class="fa-regular fa-message"></i>
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <div class="header-profile"></div>
+                </div>
+            </header>
+
+            <!-- Filters -->
+            <div class="filters-row">
+                <div class="dropdown">
+                    <select>
+                        <option>Genre</option>
+                        <option>Fiction</option>
+                        <option>Mystery</option>
+                        <option>Romance</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select>
+                        <option>Author</option>
+                        <option>J.K. Rowling</option>
+                        <option>Stephen King</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select>
+                        <option>Publication Year</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon blue-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="kpi-content">
+                        <div class="kpi-header">
+                            <h3>Highest Rated Book</h3>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <h2>4.90</h2>
+                        <p class="kpi-subtitle">'The Silent Patient' (Alex Michaelides)</p>
+                        <p class="kpi-trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 12.4% vs Avg</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon green-icon"><i class="fa-regular fa-comments"></i></div>
+                    <div class="kpi-content">
+                        <div class="kpi-header">
+                            <h3>Book with Most Reviews</h3>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <h2>125,432</h2>
+                        <p class="kpi-subtitle">'Where the Crawdads Sing' (Delia Owens)</p>
+                        <p class="kpi-trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 8.2% vs next highest</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon purple-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="kpi-content">
+                        <div class="kpi-header">
+                            <h3>Max Rating</h3>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <h2>5.00</h2>
+                        <p class="kpi-subtitle">Single highest rating found</p>
+                        <p class="kpi-trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 1.4% vs previous dataset</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon yellow-icon"><i class="fa-regular fa-message"></i></div>
+                    <div class="kpi-content">
+                        <div class="kpi-header">
+                            <h3>Max Reviews</h3>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <h2>150,000</h2>
+                        <p class="kpi-subtitle">Single highest review count</p>
+                        <p class="kpi-trend positive"><i class="fa-solid fa-arrow-trend-up"></i> 0.8% over previous year</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Top Row -->
+            <div class="charts-top-row">
+                <div class="chart-card area-chart-card">
+                    <div class="chart-header">
+                        <h3>Year-Wise Book Analysis</h3>
+                        <div class="chart-filter">
+                            <select><option>This Month</option></select>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="areaChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card donut-chart-card">
+                    <div class="chart-header">
+                        <h3>Author Analysis</h3>
+                    </div>
+                    <div class="chart-container donut-container">
+                        <canvas id="donutChart"></canvas>
+                        <div class="donut-center">
+                            <h2>500</h2>
+                            <p>Books</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Bottom Row -->
+            <div class="charts-bottom-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Genre Distribution</h3>
+                        <div class="chart-filter">
+                            <select><option>This Month</option></select>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Rating Distribution</h3>
+                        <div class="chart-filter">
+                            <select><option>This Month</option></select>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="horizontalBarChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card table-card">
+                    <div class="chart-header">
+                        <h3>Detailed Insights Table</h3>
+                        <div class="chart-filter">
+                            <select><option>This Month</option></select>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table id="insightsTable">
+                            <thead>
+                                <tr>
+                                    <th>Book Title</th>
+                                    <th>Genre</th>
+                                    <th>Author</th>
+                                    <th>Ratings <i class="fa-solid fa-sort-down"></i></th>
+                                    <th>Reviews <i class="fa-solid fa-sort"></i></th>
+                                    <th>Publication Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
